@@ -1,0 +1,321 @@
+// Functions in Javacsript
+      let myFunction = (i, j) => i * j;
+      let ans = myFunction(5, 9);
+      console.log(ans);
+
+      const sum = (a, b, c, d) => a + b - c / d;
+      const output = sum(12, 2, 3, 15, 6);
+      console.log("The result of sum is : ", output);
+
+      let summ = function (a, b, c, d) {
+        return a * b - c / d + 3;
+      };
+      console.log("the final sum is :", summ(1, 2, 3, 4));
+
+      function myAddition() {
+        let a = 90;
+        let b = 99;
+        let c = a + b;
+        console.log("the final result is : ", c);
+        return c;
+      }
+      myAddition();
+
+      const aFun = (fn, x, y) => {
+        return fn() - x + y;
+      };
+      const result = aFun(myAddition, 9, 84);
+      console.log("the arrow function result is = ", result);
+
+      function myCars() {
+        let cars = ["galenza", "baleno", "desire-swift", "maruti-suzuki"];
+        console.log(cars);
+
+        const car = {
+          Name: "galenza",
+          Color: "silver",
+          Seater: 4,
+          Price: "₹8.99999",
+          Owner: 1,
+        };
+        console.log(car);
+      }
+      myCars();
+
+      const persons = {
+        Name: "Mr. Peps",
+        favColletions: myCars,
+      };
+      persons.favColletions();
+      console.log(
+        "********************************************* My Collection of Object is : *************************************************** \n",
+        persons
+      );
+      //***********************************************************************************************************************
+      // Objects in Javascript
+      const student = {
+        Name: "Laxit",
+        Class: 12,
+        Rollno: 12143,
+        Rank: "Third",
+        Marks: 767,
+        Seatno: 77,
+      };
+
+      // find the length of array
+      let length = Object.keys(student).length;
+      console.log("The Object length is :", length);
+
+      // create a new Object
+      const Person = new Object({
+        firstName: "aniket",
+        lastName: "singh",
+        age: 30,
+        city: "Delhi",
+      });
+
+      // accessing object property
+      let accessing = Person["age"];
+      console.log("Person age is :", accessing);
+
+      // JS Object Method :- Methods are action can be performed on an Objects & Object methods are function definations stored as property values:
+
+      // accessing object property using (this)
+      const person = new Object({
+        firstName: "Nitin",
+        Lastname: "Sighaal",
+        age: 30,
+        city: "Delhi",
+        fullName: function () {
+          return this.firstName + " " + this.Lastname;
+        },
+      });
+      const fN = person.fullName();
+      console.log("The Full Name is : ", fN);
+
+      // Displaying the Javascript Objects
+      const std = {
+        Name: "Sukhhvendra Kaur",
+        Class: 10,
+        Rollno: 10141,
+        Rank: "Second",
+        Marks: 545,
+        Seatno: 17,
+      };
+      // console.log(std);
+      // const ekant = std;
+      const ekant =
+        "The Name of student is " +
+        std.Name +
+        " from class " +
+        std.Class +
+        " she got " +
+        std.Rank +
+        " rank in hole school.";
+      console.log(ekant);
+      // document.getElementById('demo').innerHTML = ekant;
+      document.getElementById("demo").innerHTML = ekant;
+
+      // Constructor Functions in Objects
+      function character(first, last, age, height, weight) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+      }
+
+      const ek = new character("Sunil", "Jangid", 24, 6.3, "87kg");
+      console.log("Yeh hai first wala new Object ", ek);
+
+      const doo = new character("Mr. Peps", "Mandan", 24, 6, "85kg");
+      console.log("Yeh hai second wala new Object ", doo);
+
+      const teen = new character("Suresh", "Paldiya", 21, 5.5, "65kg");
+      console.log("Yeh hai third wala new Object ", teen);
+
+      const chyaar = new character("Anita", "Jakhar", 24, 4.3, "47kg");
+      console.log("Yeh hai forth wala new Object ", chyaar);
+
+      const ponch = new character("Minaxi", "Paliwal", 19, 4.5, "55kg");
+      console.log("Yeh hai fifth wala new Object ", ponch);
+
+      // Note :- In the constructor function, this has no value. The value of this will become the new object when a new object is created.
+
+      // ***********************************************************************************************************************
+      // Comparisions Operators in javascript
+      let x = 5;
+      console.log(
+        "************************************ Equalto *******************************"
+      ); // its checks value if same then print true otherwise false
+      console.log(x == 8);
+      console.log(x == 5);
+      console.log(x == "5");
+
+      console.log(
+        "************************************ Strict equalto *******************************"
+      ); // its checks value or type if both are same then print true otherwise false
+      console.log(x === 5);
+      console.log(x === "5");
+
+      console.log(
+        "************************************ Not equalto *******************************"
+      ); // Compares two values for inequality after type conversion If the values are different after converting them to the same type, it returns true
+      console.log(x != 5);
+      console.log(x != 7);
+
+      console.log(
+        "************************************ Not strict equalto *******************************"
+      ); // Compares two values for inequality without type conversion. Both value and type must be different to return true
+      console.log(x !== 5);
+      console.log(x !== "5");
+      console.log(x !== 4);
+
+      console.log(
+        "************************************ Greater than *******************************"
+      ); // Checks if the value on the left is strictly greater than the value on the right.
+      console.log(x > 8);
+
+      console.log(
+        "************************************ Greater than equalto *******************************"
+      );
+      console.log(x >= 5);
+      console.log(x >= 8);
+
+      console.log(
+        "************************************ Less than *******************************"
+      );
+      console.log(x < 8);
+
+      console.log(
+        "************************************ Less than equalto *******************************"
+      );
+      console.log(x <= 8);
+      console.log(x <= 4);
+
+      console.log(
+        "************************************ Final Program of Comparision Operator *******************************"
+      ); // In this program checks men is Elegible to can Vote or Note
+      let age = 89;
+      function ageCal() {
+        if (age >= 1 && age <= 12) {
+          console.log("Now you are is a :", "Child");
+        } else if (age >= 13 && age <= 19) {
+          console.log("Now you are is a :", "TeenAger");
+        } else if (age >= 20 && age <= 35) {
+          console.log("Now you are is a :", "Young");
+        } else if (age >= 36 && age <= 60) {
+          console.log("Now you are is a :", "Adult");
+        } else if (age >= 61 && age <= 95) {
+          console.log("Now you are is a :", "old");
+        } else {
+          console.log("Now you are is a :", "Death");
+        }
+      }
+      ageCal();
+
+      // ***********************************************************************************************************************
+      // Data Types in Javascript
+      console.log(
+        "************************************ Sting Data Type *******************************"
+      ); //strings are defined with ('singleQuotes', "doubleQuotes" and `backticks`)
+      function str() {
+        let name = "Sunil";
+        let lastName = "Kumar";
+        let cast = `Suthar`;
+        console.log(name + " " + lastName + " " + cast);
+        console.log(typeof (name, lastName, cast));
+      }
+      str();
+
+      console.log(
+        "************************************ Number Primitive Data Types *******************************"
+      ); // representing integer or floating points numbers
+      function num() {
+        let x = 78;
+        console.log("Integer number is :", x);
+        let y = 7.8;
+        console.log("Floating points number is :", y);
+        console.log(typeof (x, y));
+      }
+      num();
+
+      console.log(
+        "************************************ BigInt Primitive Data Types *******************************"
+      ); // Represents integers larger than the Number type can safely handle (larger than 2^53 - 1).
+
+      let big = 5678901234567812345678901234901234567890n;
+      console.log("bigInt number is :", big);
+      console.log(typeof big);
+
+      console.log(
+        "************************************ Boolean Primitive Data Types *******************************"
+      ); // Represents one of two values: true or false.
+      function checkBoolean() {
+        let x = 6;
+        console.log("Value is", x == 8);
+        console.log("Value is", x != 8);
+        console.log(typeof (x != 8));
+      }
+      checkBoolean();
+
+      console.log(
+        "************************************ Undefined & Null Primitive Data Types *******************************"
+      );
+      function some() {
+        let d;
+        console.log("When Value is not defined :", d);
+        console.log(typeof d);
+      }
+      some(); // Represents a variable that has been declared but not assigned a value. Its default value is : undefined
+
+      const arr = null; // Represents the intentional absence of any object value. It is often used to represent : null object reference.
+      console.log("When value is null :", arr);
+      console.log(typeof arr);
+
+      console.log(
+        "************************************ Symbol Primitive Data Type *******************************"
+      ); // A unique and immutable data type primarily used to create unique property keys for objects.
+      let sym = Symbol("description");
+      console.log(sym);
+
+      console.log(
+        "************************************ Object Non-primitive Data Type *******************************"
+      ); // Object is a non-primitive data types & its written with curly braces {}. Object properties are written as name:value pairs, separated by commas. Arrays, Date, Sets, Math, Function its all are type of Objects
+      const classRoom = {
+        Class: 1,
+        ClsT: "Baldev",
+        Seats: 54,
+        Cr: "Ragvendra Singh",
+      };
+      console.log("classRoom object is represents :", classRoom);
+      console.log(typeof classRoom);
+
+      console.log(
+        "***********************************************************************************************************"
+      );
+      console.log(
+        "the typeOf operator return the data type of Javascript Variable"
+      );
+      console.log(
+        "***********************************************************************************************************"
+      );
+
+      console.log(
+        "+=+=+=+=+=+=+=+=+=+=+=+=+=+ Using toString() method print all date methods +=+=+=+=+=+=+=+=+=+=+=+=+=+=+"
+      );
+      const day = new Date();
+      const toDay = day.toString();
+      const toDate = day.toDateString();
+      const toDa = day.toLocaleDateString();
+      const toDAY = day.toTimeString();
+      const TODAY = day.toUTCString();
+      console.log("Today date & Time is :", toDay);
+      console.log("Today date is :", toDate);
+      console.log("Today date is :", toDa);
+      console.log("Now time is :", toDAY);
+      console.log("Now time is :", TODAY);
+
+      console.log(
+        "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"
+      );
