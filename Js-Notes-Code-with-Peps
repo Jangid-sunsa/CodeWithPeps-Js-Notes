@@ -319,3 +319,154 @@
       console.log(
         "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"
       );
+
+      console.log(
+        "*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= JavaScript String Methods *=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*"
+      ); //Javascript strings are primitive and immutable: All string methods produce a new string without altering the original string.
+      let joy = "congratulation"; // The length property returns the length of a string.
+      let l = joy.length;
+      console.log("The length of charaters is :", l);
+      
+      // The charAt() or at() method returns the character at a specified index (position) in a string.
+      console.log(
+        "The charAt method reruns of indexing value of string :",
+        joy.charAt(5).toUpperCase()
+      );
+      console.log(
+        "The at method reruns of indexing position of string :",
+        joy.at(0).toUpperCase()
+      ); // The At() method returns the character at a specified index (position) in a string.
+      
+      // The charCodeAt() method returns the code of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
+      let text = "HELLO WORLD";
+      let char = text.charCodeAt(1);
+      console.log(
+        "The charCodeAt method reruns the code of character at a specified index in a string :",
+        char
+      );
+      
+      // The codePointAt() method get code point value at the first position in a string:
+      let txt = "HELLO WORLD";
+      let code = txt.codePointAt(0);
+      console.log(
+        "The codePointAt() method used for get code point value at the first position in a string :",
+        code
+      );
+      
+      // Javascript String concat() method  joins two or more strings:
+      let str1 = "Jangid";
+      let str2 = "Sunil";
+      let str3 = str1.concat(" ", str2);
+      console.log("Connected string is :", str3);
+      let str4 = "Jangid" + " + " + "Sunil"; // using the '+' operator concating string;
+      console.log("Connected string using '+' operator is :", str4);
+      
+      // Javascript slice() extracts a part of a string and returns the extracted part in a new string.
+      let txts = "Apple, Banana, Kiwi";
+      let part = txts.slice(7, 13);
+      console.log("The slice string is :", part);
+      
+      // JavaScript substring() is similar to slice() but the difference is that start and end values less than 0 are treated as 0 in substring().
+      let parts = txts.substring(7, 13);
+      console.log("The substring part is :", parts);
+      
+      // Javascript substr() is similar to slice() but the difference is that the second parameter specifies the length of extracted part but in latest javascript standard substr() method is removed and use only {substring() and slice()} methods.
+      let strg = "Apple, Banana, Kiwi";
+      let newPart = strg.substr(7);
+      let newParts = strg.substr(-4); // if the first parameter is negative, the position counts from end to start {rTl}
+      console.log("The substr part is :", newPart);
+      
+      // Converting to UPPERCASE to lowercase
+      let uname = "raman deshpandey";
+      let upperName = uname.toUpperCase(); // {A string converting into upperCase then use toUpperCase();}
+      console.log("The UpperCase name is :", upperName);
+      
+      let rename = "KARTIKA RANDHAVA";
+      let lowerRename = rename.toLowerCase(); // {A string converting into lowerCase then use toLowerCase();}
+      console.log("The LowerCase name is :", lowerRename);
+      
+      // Javascript isWellFormed() return [true] when string is well-formed otherwise it return [false]. A string is not well formed if it contains lone surrogates.
+      let STR = "Hello World \uD800"; // this string isNotWellFormed then its produce result is false if this string are wellformed then result will be true
+      let results = STR.isWellFormed();
+      console.log("Kya yeh string wellformed hai =>", results);
+      
+      let Str = "Sunil Jangid";
+      let strRes = Str.isWellFormed(); // Like this its wellFormed string
+      console.log("Kya yeh string wellformed hai =>", strRes); // NOTE:- Lone Surrogates ek aisa Unicode surrogate code point hota hai jo valid surrogate pair ka hissa nahi hota, aur UTF-16 encoding me characters ko represent karne ke liye use kiya jata hai
+      
+      // Javascript string toWellFormed() this method is return a new string where all"LONE SURROGATES" are replaced with the unicode replacement character (U+FFFD).
+      let sTr = "Capsitech \uD800";
+      let reSult = sTr.toWellFormed();
+      console.log("Is replaced unicode character is :", reSult);
+      
+      /* Javascript trim() method using for removes whitespace from both sides of a string: 
+      Apart from the trim() method, there are a few other ways to remove whitespace from a string
+      1. trimStart() :- This method removes the whitespaces only from the begining (left-side) of the string.
+      let text = "      Hello World! ";
+      let result = text.trimStart();
+      console.log(result);  // "Hello World! "
+      
+      2. trimEnd() :- This method removes the whitespaces only from the end (right-side) of the string.
+      let text = " Hello World!      ";
+      let result = text.trimEnd();
+      console.log(result);  // " Hello World!"
+      
+      */
+      let Text = "   Mr Peps  ";
+      let textRes = Text.trim();
+      console.log("Without whitespaces string is :", textRes);
+      
+      // Javascript string padding this method is introduced in ES2017 : padStart() and padEnd() to support padding at the begining and at the end of a string.
+      // 1. padStart() method pads a string from the start. It pads a string with another string (multiple times) until it reaches a given length.
+      let teXt = "7";
+      let padded = teXt.padStart(3, "0");
+      console.log("Padding from begining a number :", padded);
+      
+      // 2. padEnd() method pads a string from the start. It pads a string with another string (multiple times) until it reaches a given length.
+      let tExt = "5";
+      let pad = tExt.padEnd(4, "0");
+      console.log("Padding from end of the string", pad);
+      
+      // Javascript string repeat() method returns a string with a number of copies of a string. The repeat method returns a new string.The repeat() method does not change the original string.
+      let s = "Hello world!";
+      let r = s.repeat(2); // In this method repeat the string of 2 times
+      console.log("The repeated string is :", r);
+      
+      /* Javascript replacing string content. {replace()} Using this method replaces a specified value with another value in a string: 
+          The replace() method does not change the string it is called on.
+          The replace() method returns a new string.
+          The replace() method replaces only the first match
+          If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+          By default, the replace() method replaces only the first match:
+      */
+      let oldtext = "Please visit Capsitech!";
+      let newText = oldtext.replace("Capsitech", "CodeWithPeps");
+      console.log("The replaced text is :", newText);
+      
+      // The replaceAll() method allows you to specify a regular expression instead of a string to be replaced. If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+      // In 2021, JavaScript introduced the string method replaceAll()
+      let TXT = "I love JavaScript. JavaScript is awesome!";
+      let answer = TXT.replaceAll("JavaScript", "codewithPeps");
+      console.log("All replaced text is :", answer);
+      
+      /* Javascript converting a string to an array. If you want to work with a string as an array, you can convert it to an array.
+         A string can be converted to an array with the split() method:
+         text.split(",")    // Split on commas
+         text.split(" ")    // Split on spaces
+         text.split("|")    // Split on pipe
+         If the separator is omitted, the returned array will contain the whole string in index [0].
+         If the separator is "", the returned array will be an array of single characters:
+      */
+      let Arr = "a,b,c,d,e,f";
+      const myArray = text.split(",");
+      console.log("Converted array is :", myArray);
+      
+      // Method to reverse strings
+      let greeting = "Welcome to codewithPeps";
+      let reversed = greeting.split("").reverse().join("");
+      console.log(reversed);
+      
+      console.log(
+        "=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*="
+      );
+"=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=" Thanks for Reading my Notes "=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*"
