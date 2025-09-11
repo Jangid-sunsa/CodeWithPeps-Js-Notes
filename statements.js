@@ -198,3 +198,7 @@ let studentMap = new Map([
 for (let [key, value] of studentMap) {
   console.log(key + " : " + value);
 }
+
+console.log(
+  "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"
+);
