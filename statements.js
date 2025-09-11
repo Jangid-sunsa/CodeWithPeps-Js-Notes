@@ -200,5 +200,48 @@ for (let [key, value] of studentMap) {
 }
 
 console.log(
-  "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"
+  "*=X=X=X=X=X=X=X=X=X=X=X=X=X=X=X=X=X= Spread or Rest Operators in JavaScript =X=X=X=X=X=X=X=X=X=X=X=X=X=X=X=X=X=X=*"
 );
+/* Spread operator :- The JavaScript spread operator (...) expands an iterable (like an array) into more elements.This allows us to quickly copy all or parts of an existing array into another array:
+    1.Javascript me spread operator k usage :- 
+    2.Array ya object ke elements ko copy kar sakte hain.
+    3.Do arrays/objects ko merge kar sakte hain.
+    4.Function me arguments ko individual values ki tarah pass kar sakte hain.
+*/
+
+console.log(
+  "--------------------- using spread copy array ---------------------"
+);
+let ar1 = [1, 2, 3, 1];
+let ar2 = [...ar1];
+console.log(ar2);
+
+console.log(
+  "--------------------- using spread merge array ---------------------"
+);
+let arr1 = ["aabra", "ka"];
+let arr2 = ["dabra", "gili-gili", "chhooo"];
+let arr3 = [...arr1, ...arr2];
+let arr4 = [...arr1, ...arr2].join(" ");
+console.log(arr3);
+console.log(arr4);
+
+console.log(
+  "--------------------- using spread pass function arguments ---------------------"
+);
+function mult(a, b, c) {
+  return a * b * c;
+}
+let nums = [14, 45, 21];
+console.log("Final result is :", mult(...nums));
+
+console.log(
+  "--------------------- Rest Operator in Javascript ---------------------"
+);
+function intro(first, second, ...others) {
+  console.log("First:", first);
+  console.log("Second:", second);
+  console.log("Others:", others);
+}
+
+intro("Sunil", "Amit", "Ravina", "Neha", "Kirthi");
